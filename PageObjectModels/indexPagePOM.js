@@ -51,4 +51,10 @@ class IndexPage{
         return textConfirm
 
     }
+
+    async clickCart(){
+
+        await this.page.locator(this.cartIcon).click()
+
+    }
 }
