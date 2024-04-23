@@ -1,3 +1,4 @@
+const { expect } = require("@playwright/test");
 
 exports.CartPage = 
 class CartPage{
@@ -9,17 +10,5 @@ class CartPage{
 
     }
 
-    async checkItemsInCart(){
-
-        let itemsInCart = await this.page.$$(this.allItems)
-
-        for(let item of itemsInCart){
-
-            let itemNameText = await item.textContent()
-            console.log('Item in cart:', itemNameText);
-            
-        }
-
-        
-    }
+   
 }

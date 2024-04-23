@@ -3,7 +3,6 @@ const {test, expect} = require ('@playwright/test')
 import {IndexPage} from '../PageObjectModels/indexPagePOM'
 import {LoginPage} from '../PageObjectModels/loginPagePOM'
 import credentials from '../JsonFiles/credentials.json'
-import { CartPage } from '../PageObjectModels/cartPagePOM'
 import itemNames from '../JsonFiles/itemNames.json'
 
 test.describe('Testing add to cart button functionality',()=>{
@@ -46,14 +45,23 @@ test.describe('Testing add to cart button functionality',()=>{
 
     })
 
-    test.only('Check if the items are actually added to cart', async({page})=>{
+    test('Verify that items are actually added to cart', async({page})=>{
 
-        const indexPage = new IndexPage(page)
+        let indexPage = new IndexPage(page)
+    
         await indexPage.addAllItemsToCart()
         await indexPage.clickCart()
-
-        const cartPage = new CartPage(page)
-        await cartPage.checkItemsInCart()
-
+        
+        let allItemNames = await page.$$('.inventory_item_name')
+    
+        for(let i=0; i<allItemNames.length; i++){
+    
+            let itemNameText = await allItemNames[i].textContent()
+            expect(itemNameText).toBe(itemNames[i].elName)  //pokusaj da ovo spakujes u funkciju
+    
+        }
+    
+        
     })
+
 })

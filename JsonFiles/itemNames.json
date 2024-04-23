@@ -1,10 +1,9 @@
+
 [
-
-    {"itemName":"Sauce Labs Backpack"},
-    {"itemName":"Sauce Labs Bike Light"},
-    {"itemName":"Sauce Labs Bolt T-Shirt"},
-    {"itemName":"Sauce Labs Fleece Jacket"},
-    {"itemName":"Sauce Labs Onesie"},
-    {"itemName":"Test.allTheThings() T-Shirt (Red)"}
-
+    {"elName" : "Sauce Labs Backpack"},
+    {"elName" : "Sauce Labs Bike Light"},
+    {"elName" : "Sauce Labs Bolt T-Shirt"},
+    {"elName" : "Sauce Labs Fleece Jacket"},
+    {"elName" : "Sauce Labs Onesie"},
+    {"elName" : "Test.allTheThings() T-Shirt (Red)"}
 ]
