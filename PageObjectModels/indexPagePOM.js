@@ -57,4 +57,5 @@ class IndexPage{
         await this.page.locator(this.cartIcon).click()
 
     }
+    
 }

@@ -1,5 +1,8 @@
 {
 
-    "indexUrl":"https://www.saucedemo.com/inventory.html"
+    "indexUrl":"https://www.saucedemo.com/inventory.html",
+    "twitterUrl":"https://twitter.com/saucelabs",
+    "facebookUrl":"https://www.facebook.com/saucelabs",
+    "linkedInUrl":"https://www.facebook.com/saucelabs"
     
 }
