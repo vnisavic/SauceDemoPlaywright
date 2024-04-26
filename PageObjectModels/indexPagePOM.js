@@ -30,7 +30,7 @@ class IndexPage{
         this.allItemNames = '.inventory_item_name '
         this.aToZFilterOption = "option[value='az']"
         this.hiddenFilterOptions = "select[class='product_sort_container'] option"
-
+        this.allPrices = '.inventory_item_price'
     }
 
     async addAllItemsToCart(){
@@ -74,27 +74,6 @@ class IndexPage{
 
     }
 
-    async filterCheckAtoZ(){
-
-        await this.page.locator(this.filter).selectOption('az')
-
-        let filterWorking = false
-
-        let allItemNames = await this.page.$$(this.allItemNames)
-        let firstItemName = await allItemNames[0].textContent()
-        let lastItemName = await allItemNames[allItemNames.length - 1].textContent()
-
-        if(firstItemName < lastItemName){
-
-            filterWorking = true
-            console.log("First item is ", firstItemName)
-            console.log("Last item is ",lastItemName)
-
-        }
-
-        return filterWorking
-    }
-
     async filterCheck(selectOptionValue){
 
         await this.page.locator(this.filter).selectOption(selectOptionValue)
@@ -110,12 +89,11 @@ class IndexPage{
           if(firstItemName < lastItemName){
 
             filterWorking = true
-            console.log("First item is ", firstItemName)
-            console.log("Last item is ",lastItemName)
 
           } 
           return filterWorking
-        } else if(selectOptionValue == 'za'){
+        } 
+        else if(selectOptionValue == 'za'){
 
             let filterWorking = false
 
@@ -126,14 +104,51 @@ class IndexPage{
           if(firstItemName > lastItemName){
 
             filterWorking = true
-            console.log("First item is ", firstItemName)
-            console.log("Last item is ",lastItemName)
 
           } 
           return filterWorking
-        }else if(selectOptionValue == 'lohi'){
+        }
+        else if(selectOptionValue == 'lohi'){
 
+            let filterWorking = false
+
+            let allItemPrices = await this.page.$$(this.allPrices)
+            let lowestPrice = await allItemPrices[0].textContent()
+            let highestPrice = await allItemPrices[allItemPrices.length - 1].textContent()
             
+            let removeDollarLowest = await lowestPrice.replace('$', '')
+            let removeDollarHighest = await highestPrice.replace('$', '')
+
+            let priceLow = await parseFloat(removeDollarLowest)
+            let priceHigh = await parseFloat(removeDollarHighest)
+
+            if(priceLow < priceHigh){
+
+                filterWorking = true
+
+            }
+            return filterWorking
+        }
+        else if(selectOptionValue == 'hilo'){
+
+            let filterWorking = false
+
+            let allItemPrices = await this.page.$$(this.allPrices)
+            let highestPrice = await allItemPrices[0].textContent()
+            let lowestPrice = await allItemPrices[allItemPrices.length - 1].textContent()
+            
+            let removeDollarLowest = await lowestPrice.replace('$', '')
+            let removeDollarHighest = await highestPrice.replace('$', '')
+
+            let priceLow = await parseFloat(removeDollarLowest)
+            let priceHigh = await parseFloat(removeDollarHighest)
+
+            if(priceHigh > priceLow){
+
+                filterWorking = true
+
+            }
+            return filterWorking
         }
         
     }
