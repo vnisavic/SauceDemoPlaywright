@@ -21,6 +21,12 @@ class IndexPage{
         this.allCartButtons = '.btn'
         this.removeCartBtn = '#remove-sauce-labs-backpack'
 
+        this.backPackItem = '#item_4_title_link'
+        this.allItemsSidebar = '#inventory_sidebar_link'
+        this.aboutSidebar = '#about_sidebar_link'
+        this.logOutSidebar = '#logout_sidebar_link'
+        this.resetApp = '#reset_sidebar_link'
+
     }
 
     async addAllItemsToCart(){
@@ -55,6 +61,12 @@ class IndexPage{
     async clickCart(){
 
         await this.page.locator(this.cartIcon).click()
+
+    }
+
+    async clickItem(locator){
+
+        await this.page.locator(locator).click()
 
     }
     
