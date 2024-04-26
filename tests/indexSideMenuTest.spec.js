@@ -4,7 +4,6 @@ import {IndexPage} from '../PageObjectModels/indexPagePOM'
 import {LoginPage} from '../PageObjectModels/loginPagePOM'
 import credentials from '../JsonFiles/credentials.json'
 import urls from '../JsonFiles/urls.json'
-import { url } from 'inspector'
 
 test.describe('Testing the index page side menu functionality', ()=>{
 
@@ -64,4 +63,5 @@ test.describe('Testing the index page side menu functionality', ()=>{
 
         
     })
+    
 })

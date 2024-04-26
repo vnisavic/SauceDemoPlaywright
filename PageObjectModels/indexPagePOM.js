@@ -27,6 +27,10 @@ class IndexPage{
         this.logOutSidebar = '#logout_sidebar_link'
         this.resetApp = '#reset_sidebar_link'
 
+        this.allItemNames = '.inventory_item_name '
+        this.aToZFilterOption = "option[value='az']"
+        this.hiddenFilterOptions = "select[class='product_sort_container'] option"
+
     }
 
     async addAllItemsToCart(){
@@ -68,6 +72,70 @@ class IndexPage{
 
         await this.page.locator(locator).click()
 
+    }
+
+    async filterCheckAtoZ(){
+
+        await this.page.locator(this.filter).selectOption('az')
+
+        let filterWorking = false
+
+        let allItemNames = await this.page.$$(this.allItemNames)
+        let firstItemName = await allItemNames[0].textContent()
+        let lastItemName = await allItemNames[allItemNames.length - 1].textContent()
+
+        if(firstItemName < lastItemName){
+
+            filterWorking = true
+            console.log("First item is ", firstItemName)
+            console.log("Last item is ",lastItemName)
+
+        }
+
+        return filterWorking
+    }
+
+    async filterCheck(selectOptionValue){
+
+        await this.page.locator(this.filter).selectOption(selectOptionValue)
+
+        if(selectOptionValue == 'az'){
+
+            let filterWorking = false
+
+            let allItemNames = await this.page.$$(this.allItemNames)
+            let firstItemName = await allItemNames[0].textContent()
+            let lastItemName = await allItemNames[allItemNames.length - 1].textContent()
+
+          if(firstItemName < lastItemName){
+
+            filterWorking = true
+            console.log("First item is ", firstItemName)
+            console.log("Last item is ",lastItemName)
+
+          } 
+          return filterWorking
+        } else if(selectOptionValue == 'za'){
+
+            let filterWorking = false
+
+            let allItemNames = await this.page.$$(this.allItemNames)
+            let firstItemName = await allItemNames[0].textContent()
+            let lastItemName = await allItemNames[allItemNames.length - 1].textContent()
+
+          if(firstItemName > lastItemName){
+
+            filterWorking = true
+            console.log("First item is ", firstItemName)
+            console.log("Last item is ",lastItemName)
+
+          } 
+          return filterWorking
+        }else if(selectOptionValue == 'lohi'){
+
+            
+        }
+        
     }
     
 }
