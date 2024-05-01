@@ -14,7 +14,8 @@
     "onesieUrl":"https://www.saucedemo.com/inventory-item.html?id=2",
     "redShirtUrl":"https://www.saucedemo.com/inventory-item.html?id=3",
     "checkoutStepTwo":"https://www.saucedemo.com/checkout-step-two.html",
-    "cartPageUrl":"https://www.saucedemo.com/cart.html"
+    "cartPageUrl":"https://www.saucedemo.com/cart.html",
+    "checkoutComplete":"https://www.saucedemo.com/checkout-complete.html"
 
    
 }

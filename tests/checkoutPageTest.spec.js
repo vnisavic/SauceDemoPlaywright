@@ -85,7 +85,7 @@ test.describe('Testing checkout page', ()=>{
 
         await indexPage.clickItem(checkoutPage.cancelBtn)
         await expect(page.url()).toBe(urls.cartPageUrl)
-        
+
     })
 })
 
