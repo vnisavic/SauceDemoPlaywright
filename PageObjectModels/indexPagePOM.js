@@ -31,6 +31,15 @@ class IndexPage{
         this.aToZFilterOption = "option[value='az']"
         this.hiddenFilterOptions = "select[class='product_sort_container'] option"
         this.allPrices = '.inventory_item_price'
+        this.backtoProducts = '#back-to-products'
+
+        this.backPackLink = '#item_4_title_link'
+        this.lightLink = '#item_0_title_link'
+        this.jacketkLink = '#item_5_title_link'
+        this.thishirtLink = "#item_1_title_link"
+        this.onesieLink = '#item_2_title_link'
+        this.redshirtLink = '#item_3_title_link'
+        
     }
 
     async addAllItemsToCart(){

@@ -6,7 +6,12 @@
     "linkedInUrl":"https://www.facebook.com/saucelabs",
     "aboutSidebarLink":"https://saucelabs.com/",
     "loginUrl":"https://www.saucedemo.com/",
-    "checkoutUrl":"https://www.saucedemo.com/checkout-step-one.html"
-
-    
+    "checkoutUrl":"https://www.saucedemo.com/checkout-step-one.html",
+    "backPackUrl":"https://www.saucedemo.com/inventory-item.html?id=4",
+    "lightUrl":"https://www.saucedemo.com/inventory-item.html?id=0",
+    "tshirtUrl":"https://www.saucedemo.com/inventory-item.html?id=1",
+    "jacketUrl":"https://www.saucedemo.com/inventory-item.html?id=5",
+    "onesieUrl":"https://www.saucedemo.com/inventory-item.html?id=2",
+    "redShirtUrl":"https://www.saucedemo.com/inventory-item.html?id=3"
+   
 }

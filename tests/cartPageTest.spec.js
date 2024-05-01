@@ -4,7 +4,7 @@ import {LoginPage} from '../PageObjectModels/loginPagePOM'
 import credentials from '../JsonFiles/credentials.json'
 import {CartPage} from '../PageObjectModels/cartPagePOM'
 import urls from '../JsonFiles/urls.json'
-import itemNames from '../JsonFiles/itemNames.json'
+
 
 
 test.describe('Testing shoping cart page buttons', ()=>{
@@ -49,6 +49,6 @@ test.describe('Testing shoping cart page buttons', ()=>{
         await indexPage.clickItem(indexPage.cartIcon)
         await indexPage.clickItem(cartPage.checkoutBtn)
         await expect(page.url()).toBe(urls.checkoutUrl)
-        
+
     })
 })
