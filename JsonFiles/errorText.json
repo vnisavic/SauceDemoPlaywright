@@ -3,6 +3,8 @@
     "errorText": "Epic sadface: Sorry, this user has been locked out.",
     "usernameEmptyText" : "Epic sadface: Username is required",
     "passwordEmptyText": "Epic sadface: Password is required",
-    "userOrPassInvalid": "Epic sadface: Username and password do not match any user in this service"
-    
+    "userOrPassInvalid": "Epic sadface: Username and password do not match any user in this service",
+    "checkoutUsernameError":"Error: First Name is required",
+    "checkoutLastnameError":"Error: Last Name is required",
+    "checkoutPostalCodeError":"Error: Postal Code is required"
 }

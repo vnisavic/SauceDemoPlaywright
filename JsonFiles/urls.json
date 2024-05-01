@@ -12,6 +12,9 @@
     "tshirtUrl":"https://www.saucedemo.com/inventory-item.html?id=1",
     "jacketUrl":"https://www.saucedemo.com/inventory-item.html?id=5",
     "onesieUrl":"https://www.saucedemo.com/inventory-item.html?id=2",
-    "redShirtUrl":"https://www.saucedemo.com/inventory-item.html?id=3"
+    "redShirtUrl":"https://www.saucedemo.com/inventory-item.html?id=3",
+    "checkoutStepTwo":"https://www.saucedemo.com/checkout-step-two.html",
+    "cartPageUrl":"https://www.saucedemo.com/cart.html"
+
    
 }
