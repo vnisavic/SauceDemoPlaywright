@@ -6,7 +6,8 @@ class CartPage{
     constructor(page){
 
         this.page = page
-        this.allItems = '.inventory_item_name'
+        this.contShoping = '#continue-shopping'
+        this.checkoutBtn = '#checkout'
 
     }
 
